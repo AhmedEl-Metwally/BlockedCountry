@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BlockedCountry.API/BlockedCountry.API.csproj" />
+  <Project Path="BlockedCountry.Application/BlockedCountry.Application.csproj" />
+  <Project Path="BlockedCountry.Domain/BlockedCountry.Domain.csproj" />
+  <Project Path="BlockedCountry.Infrastructure/BlockedCountry.Infrastructure.csproj" />
+</Solution>
