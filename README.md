@@ -1,6 +1,6 @@
 # BlockedCountry Management System
 
-This project is a technical assessment developed using **.NET 10** and **Clean Architecture** principles.
+This project is a technical assessment developed using **.NET 8** and **Clean Architecture** principles.
 
 ## 🚀 Features Implemented:
 - **IP Lookup & Check-Block:** Integration with external Geolocation API (ipapi.co) using `IHttpClientFactory`.
