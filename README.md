@@ -5,6 +5,7 @@ A Production-Ready Backend Solution for Geo-Blocking & IP Management.
 This repository contains a robust implementation of a country-blocking system built with .NET 8, following the Clean Architecture pattern to ensure a clear separation of concerns, maintainability, and scalability.
 
 🛠 Technical Architecture & Stack
+
 Architecture: Clean Architecture (Domain, Application, Infrastructure, and API layers).
 
 Storage: High-performance In-Memory storage using ConcurrentDictionary to ensure Thread-Safety in multi-threaded environments.
@@ -16,6 +17,7 @@ Background Tasks: Implemented a Worker Service (Hosted Service) to handle automa
 Validation: Leveraged FluentValidation for strict input schema enforcement (IP formats, Country Codes, etc.).
 
 🌟 Key Features
+
 Dynamic Blocking: Ability to block/unblock countries and list them with full Pagination and Search support.
 
 Temporal Blocking: Supports temporary bans with a maximum duration of 24 hours.
@@ -27,6 +29,7 @@ Audit Logging: Comprehensive logging of all blocked access attempts, including I
 API Documentation: Fully documented via Swagger UI for easy testing and integration.
 
 🚀 How to Run
+
 Clone the repository.
 
 Update appsettings.json with your Geolocation API configurations.
