@@ -1,16 +1,35 @@
-# BlockedCountry Management System
+🌍 BlockedCountry Management System
+A Production-Ready Backend Solution for Geo-Blocking & IP Management.
 
-This project is a technical assessment developed using **.NET 8** and **Clean Architecture** principles.
+This repository contains a robust implementation of a country-blocking system built with .NET 8, following the Clean Architecture pattern to ensure a clear separation of concerns, maintainability, and scalability.
 
-## 🚀 Features Implemented:
-- **IP Lookup & Check-Block:** Integration with external Geolocation API (ipapi.co) using `IHttpClientFactory`.
-- **Memory Storage:** Efficient country blocking management using `ConcurrentDictionary` for thread-safety.
-- **Temporal Blocking:** Automatic unblocking system using a **Background Service** that runs every 1 minutes.
-- **Comprehensive Logging:** Tracks all blocked attempts with details like IP, Timestamp, and User-Agent.
-- **Validation:** Robust input validation using **FluentValidation**.
+🛠 Technical Architecture & Stack
+Architecture: Clean Architecture (Domain, Application, Infrastructure, and API layers).
 
-## 🛠️ How to Test:
-1. Run the project (Swagger will open automatically).
-2. Use the `/api/Ips/lookup` endpoint to fetch details for IP `156.202.155.101`.
-3. Block a country (e.g., "EG") using `/api/Countries/block`.
-4. Verify the block status using `/api/Ips/check-block`.
+Storage: High-performance In-Memory storage using ConcurrentDictionary to ensure Thread-Safety in multi-threaded environments.
+
+External Integration: Integrated with ipapi.co via IHttpClientFactory for reliable geolocation data fetching.
+
+Background Tasks: Implemented a Worker Service (Hosted Service) to handle automatic unblocking logic for temporal blocks every 5 minutes.
+
+Validation: Leveraged FluentValidation for strict input schema enforcement (IP formats, Country Codes, etc.).
+
+🌟 Key Features
+Dynamic Blocking: Ability to block/unblock countries and list them with full Pagination and Search support.
+
+Temporal Blocking: Supports temporary bans with a maximum duration of 24 hours.
+
+IP Lookup & Verification: Real-time checking if a caller's IP or a specific IP belongs to a blocked region.
+
+Audit Logging: Comprehensive logging of all blocked access attempts, including IP, Timestamp, and User-Agent for security auditing.
+
+API Documentation: Fully documented via Swagger UI for easy testing and integration.
+
+🚀 How to Run
+Clone the repository.
+
+Update appsettings.json with your Geolocation API configurations.
+
+Run dotnet build and dotnet run.
+
+Navigate to /swagger to explore the endpoints.
